@@ -1,0 +1,59 @@
+# Main configuration file for Sutton & Barto RL Introduction
+# 主配置文件 - 强化学习导论
+
+defaults:
+  - _self_
+  - experiment: null  # Override with specific experiment config
+
+# General settings  
+# 通用设置
+general:
+  seed: 42  # Random seed for reproducibility / 随机种子，用于结果重现
+  device: cpu  # Device to run on (cpu/cuda) / 运行设备
+  log_interval: 10  # Log every N episodes / 每N个episode记录一次
+  save_plots: true  # Save generated plots / 是否保存生成的图表
+  plot_dir: outputs/plots  # Directory to save plots / 图表保存目录
+  
+# Visualization settings
+# 可视化设置  
+visualization:
+  figure_size: [10, 6]  # Default figure size [width, height] / 默认图表尺寸
+  dpi: 100  # Dots per inch for saved figures / 保存图片的分辨率
+  style: seaborn-v0_8  # Matplotlib style / Matplotlib样式
+  show_grid: true  # Show grid on plots / 是否显示网格
+  
+# Experiment tracking
+# 实验跟踪
+tracking:
+  enable_wandb: false  # Enable Weights & Biases tracking / 是否启用W&B跟踪
+  wandb_project: sutton-rl  # W&B project name / W&B项目名称
+  wandb_entity: null  # W&B entity (username/team) / W&B实体
+  
+# Hydra configuration
+# Hydra配置
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  job:
+    name: ${hydra.job.override_dirname}
+  job_logging:
+    version: 1
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(name)s][%(levelname)s] - %(message)s'
+    handlers:
+      console:
+        class: logging.StreamHandler
+        formatter: simple
+        stream: ext://sys.stdout
+      file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: ${hydra.runtime.output_dir}/${hydra.job.name}.log
+    root:
+      level: INFO
+      handlers: [console, file]
+    disable_existing_loggers: false

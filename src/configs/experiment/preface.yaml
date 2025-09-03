@@ -1,0 +1,30 @@
+# @package _global_
+# Configuration for Preface experiments
+# 前言部分实验配置
+
+defaults:
+  - override /hydra/launcher: basic
+
+# Preface specific parameters
+# 前言特定参数
+preface:
+  # Tic-tac-toe experiment parameters
+  # 井字棋实验参数
+  tictactoe:
+    episodes: 10000  # Number of training episodes / 训练回合数
+    epsilon: 0.1  # Exploration rate for epsilon-greedy / ε-贪婪探索率
+    alpha: 0.5  # Learning rate / 学习率
+    opponent_epsilon: 0.1  # Opponent's exploration rate / 对手探索率
+    
+  # Value function demonstration
+  # 价值函数演示
+  value_demo:
+    grid_size: 5  # Size of grid world / 网格世界大小
+    gamma: 0.9  # Discount factor / 折扣因子
+    iterations: 100  # Policy evaluation iterations / 策略评估迭代次数
+    
+  # Reward hypothesis demonstration  
+  # 奖励假设演示
+  reward_demo:
+    env_types: ["maze", "mountain_car", "pole_balance"]  # Environment types / 环境类型
+    episodes_per_env: 100  # Episodes per environment / 每个环境的回合数
