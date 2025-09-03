@@ -14,3 +14,64 @@ dependencies = [
     "seaborn>=0.12.0",
     "scipy>=1.10.0",
 ]
+
+[tool.ruff]
+# Ruff configuration (modern Python linter)
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by line-length)
+    "E266",  # too many leading '#' for block comment
+    "W503",  # line break before binary operator
+    "F401",  # imported but unused
+    "F841",  # local variable assigned but never used
+    "B008",  # do not perform function calls in argument defaults
+    "B024",  # abstract class without abstract methods
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # unused imports in init files
+"run_*.py" = ["F841"]      # unused variables in run scripts
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+check_untyped_defs = true
+
+[tool.pylint]
+max-line-length = 120
+disable = [
+    "C0111",  # missing docstrings
+    "C0103",  # invalid name
+    "R0913",  # too many arguments
+    "R0914",  # too many local variables
+    "W0613",  # unused argument
+    "W0612",  # unused variable
+    "F0401",  # import error
+    "E1101",  # no member
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

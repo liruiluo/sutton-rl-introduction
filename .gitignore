@@ -1,1 +1,68 @@
 *.pdf
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Hydra outputs
+outputs/
+multirun/
+.hydra/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+
+# Logs
+*.log
+logs/
+
+# Models and data
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+
+# Plots (keep example plots)
+*.png
+*.jpg
+*.jpeg
+*.gif
+!docs/images/*.png
+
+# Temporary files
+tmp/
+temp/
+*.tmp
