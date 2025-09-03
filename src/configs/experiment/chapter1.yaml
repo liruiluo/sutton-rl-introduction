@@ -1,0 +1,54 @@
+# @package _global_
+# Configuration for Chapter 1: Multi-Armed Bandits experiments
+# 第1章：多臂赌博机实验配置
+
+defaults:
+  - override /hydra/launcher: basic
+
+# Chapter 1 specific parameters
+# 第1章特定参数
+chapter1:
+  # Bandit environment settings
+  # 赌博机环境设置
+  bandit:
+    k: 10  # Number of arms / 臂的数量
+    stationary: true  # Whether reward distributions are stationary / 奖励分布是否平稳
+    reward_type: gaussian  # Type of reward distribution / 奖励分布类型
+    
+  # Experiment settings
+  # 实验设置
+  experiment:
+    n_runs: 100  # Number of independent runs / 独立运行次数
+    n_steps: 1000  # Steps per run / 每次运行的步数
+    
+  # Algorithm parameters
+  # 算法参数
+  algorithms:
+    epsilon_greedy:
+      epsilon: 0.1  # Exploration rate / 探索率
+      epsilon_decay: null  # Decay rate (null for fixed) / 衰减率
+      alpha: 0.1  # Learning rate / 学习率
+      
+    ucb:
+      c: 2.0  # Exploration parameter / 探索参数
+      
+    gradient_bandit:
+      alpha: 0.1  # Learning rate / 学习率
+      use_baseline: true  # Whether to use baseline / 是否使用基线
+      baseline_alpha: 0.1  # Baseline update rate / 基线更新率
+      temperature: 1.0  # Softmax temperature / Softmax温度
+      
+  # Visualization settings
+  # 可视化设置
+  visualization:
+    show_plots: true  # Display plots / 显示图表
+    save_plots: true  # Save plots to file / 保存图表到文件
+    plot_formats: ['png', 'pdf']  # Output formats / 输出格式
+    figure_size: [12, 8]  # Default figure size / 默认图表大小
+    
+  # Analysis settings
+  # 分析设置
+  analysis:
+    compute_regret: true  # Compute cumulative regret / 计算累积遗憾
+    compute_optimal_action_percentage: true  # Track optimal action selection / 跟踪最优动作选择
+    moving_average_window: 50  # Window for smoothing curves / 平滑曲线的窗口大小
