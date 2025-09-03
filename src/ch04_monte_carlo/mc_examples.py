@@ -125,8 +125,12 @@ class Blackjack(MDPEnvironment):
         初始化21点环境
         Initialize Blackjack environment
         """
-        # 创建状态空间
-        # Create state space
+        # 先调用基类构造函数
+        # Call base class constructor first
+        super().__init__(name="Blackjack")
+        
+        # 然后创建状态空间（覆盖基类的空列表）
+        # Then create state space (overwrite base class empty list)
         self.state_space = []
         
         # 所有可能的状态组合
@@ -166,13 +170,6 @@ class Blackjack(MDPEnvironment):
         self.player_cards = []
         self.dealer_cards = []
         self.current_state = None
-        
-        super().__init__(
-            name="Blackjack",
-            state_space=self.state_space,
-            action_space=self.action_space,
-            initial_state=None  # 将在reset中设置
-        )
         
         logger.info("初始化21点环境")
     
@@ -573,6 +570,10 @@ class RaceTrack(MDPEnvironment):
             track_name: 赛道名称
                        Track name
         """
+        # 先调用基类构造函数
+        # Call base class constructor first
+        super().__init__(name=f"RaceTrack-{track_name}")
+        
         # 创建赛道地图
         # Create track map
         self.track_map = self._create_track(track_name)
@@ -594,8 +595,8 @@ class RaceTrack(MDPEnvironment):
         # Velocity limits
         self.max_velocity = 5
         
-        # 创建状态和动作空间
-        # Create state and action spaces
+        # 创建状态和动作空间（覆盖基类的空列表）
+        # Create state and action spaces (overwrite base class empty lists)
         self._create_spaces()
         
         # 当前状态
@@ -603,13 +604,6 @@ class RaceTrack(MDPEnvironment):
         self.position = None
         self.velocity = None
         self.current_state = None
-        
-        super().__init__(
-            name=f"RaceTrack-{track_name}",
-            state_space=self.state_space,
-            action_space=self.action_space,
-            initial_state=None
-        )
         
         logger.info(f"初始化赛道环境: {track_name}")
     

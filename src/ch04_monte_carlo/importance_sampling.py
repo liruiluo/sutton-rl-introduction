@@ -1075,6 +1075,20 @@ class IncrementalISMC(ImportanceSampling):
         
         logger.info("初始化增量IS MC")
     
+    def update_value(self, episode: Episode):
+        """
+        更新价值（使用增量加权IS）
+        Update value (using incremental weighted IS)
+        
+        注意：IncrementalISMC主要通过learn方法工作
+        Note: IncrementalISMC primarily works through learn method
+        """
+        # 这个方法主要是为了满足基类接口
+        # This method is mainly to satisfy base class interface
+        # 实际的增量更新在learn方法中实现
+        # Actual incremental update is implemented in learn method
+        pass
+    
     def learn(self, n_episodes: int = 1000, 
              verbose: bool = True) -> Tuple[Policy, ActionValueFunction]:
         """
