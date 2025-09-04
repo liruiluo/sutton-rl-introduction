@@ -1,7 +1,7 @@
 """
 ================================================================================
-第4.4节：重要性采样 - Off-Policy学习的数学基础
-Section 4.4: Importance Sampling - Mathematical Foundation of Off-Policy Learning
+第5.4节：重要性采样 - Off-Policy学习的数学基础
+Section 5.4: Importance Sampling - Mathematical Foundation of Off-Policy Learning
 ================================================================================
 
 重要性采样是off-policy学习的核心技术。
@@ -74,8 +74,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第4.4.1节：重要性采样基础
-# Section 4.4.1: Importance Sampling Fundamentals
+# 第5.4.1节：重要性采样基础
+# Section 5.4.1: Importance Sampling Fundamentals
 # ================================================================================
 
 class ImportanceSamplingTheory:
@@ -305,8 +305,8 @@ class ImportanceSamplingTheory:
 
 
 # ================================================================================
-# 第4.4.2节：重要性采样基类
-# Section 4.4.2: Importance Sampling Base Class
+# 第5.4.2节：重要性采样基类
+# Section 5.4.2: Importance Sampling Base Class
 # ================================================================================
 
 class ImportanceSampling(ABC):
@@ -566,8 +566,8 @@ class ImportanceSampling(ABC):
 
 
 # ================================================================================
-# 第4.4.3节：普通重要性采样
-# Section 4.4.3: Ordinary Importance Sampling
+# 第5.4.3节：普通重要性采样
+# Section 5.4.3: Ordinary Importance Sampling
 # ================================================================================
 
 class OrdinaryImportanceSampling(ImportanceSampling):
@@ -787,8 +787,8 @@ class OrdinaryImportanceSampling(ImportanceSampling):
 
 
 # ================================================================================
-# 第4.4.4节：加权重要性采样
-# Section 4.4.4: Weighted Importance Sampling
+# 第5.4.4节：加权重要性采样
+# Section 5.4.4: Weighted Importance Sampling
 # ================================================================================
 
 class WeightedImportanceSampling(ImportanceSampling):
@@ -1012,8 +1012,8 @@ class WeightedImportanceSampling(ImportanceSampling):
 
 
 # ================================================================================
-# 第4.4.5节：增量重要性采样MC
-# Section 4.4.5: Incremental Importance Sampling MC
+# 第5.4.5节：增量重要性采样MC
+# Section 5.4.5: Incremental Importance Sampling MC
 # ================================================================================
 
 class IncrementalISMC(ImportanceSampling):
@@ -1294,8 +1294,8 @@ class IncrementalISMC(ImportanceSampling):
 
 
 # ================================================================================
-# 第4.4.6节：IS可视化器
-# Section 4.4.6: IS Visualizer
+# 第5.4.6节：IS可视化器
+# Section 5.4.6: IS Visualizer
 # ================================================================================
 
 class ISVisualizer:
@@ -1511,8 +1511,8 @@ class ISVisualizer:
 
 
 # ================================================================================
-# 第4.4.7节：IS综合演示
-# Section 4.4.7: IS Comprehensive Demo
+# 第5.4.7节：IS综合演示
+# Section 5.4.7: IS Comprehensive Demo
 # ================================================================================
 
 def demonstrate_importance_sampling():

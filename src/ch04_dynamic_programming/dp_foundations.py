@@ -1,7 +1,7 @@
 """
 ================================================================================
-第3.1节：动态规划基础 - RL算法的理论根基
-Section 3.1: Dynamic Programming Foundations - Theoretical Basis of RL Algorithms
+第4.1节：动态规划基础 - RL算法的理论根基
+Section 4.1: Dynamic Programming Foundations - Theoretical Basis of RL Algorithms
 ================================================================================
 
 动态规划(Dynamic Programming, DP)这个名字听起来很酷，但它的核心思想其实很简单：
@@ -54,8 +54,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第3.1.1节：动态规划的核心思想
-# Section 3.1.1: Core Ideas of Dynamic Programming
+# 第4.1.1节：动态规划的核心思想
+# Section 4.1.1: Core Ideas of Dynamic Programming
 # ================================================================================
 
 class DynamicProgrammingFoundations:
@@ -299,8 +299,8 @@ class DynamicProgrammingFoundations:
 
 
 # ================================================================================
-# 第3.1.2节：贝尔曼算子
-# Section 3.1.2: Bellman Operators
+# 第4.1.2节：贝尔曼算子
+# Section 4.1.2: Bellman Operators
 # ================================================================================
 
 class BellmanOperator:
@@ -550,8 +550,8 @@ class BellmanOperator:
 
 
 # ================================================================================
-# 第3.1.3节：策略评估（预测问题）
-# Section 3.1.3: Policy Evaluation (Prediction Problem)
+# 第4.1.3节：策略评估（预测问题）
+# Section 4.1.3: Policy Evaluation (Prediction Problem)
 # ================================================================================
 
 class PolicyEvaluationDP:
@@ -791,8 +791,8 @@ class PolicyEvaluationDP:
 
 
 # ================================================================================
-# 第3.1.4节：策略改进（控制问题的一部分）
-# Section 3.1.4: Policy Improvement (Part of Control Problem)
+# 第4.1.4节：策略改进（控制问题的一部分）
+# Section 4.1.4: Policy Improvement (Part of Control Problem)
 # ================================================================================
 
 class PolicyImprovementDP:
@@ -967,8 +967,8 @@ def main():
     This demo shows core concepts and algorithms of DP
     """
     print("\n" + "="*80)
-    print("第3.1节：动态规划基础")
-    print("Section 3.1: Dynamic Programming Foundations")
+    print("第4.1节：动态规划基础")
+    print("Section 4.1: Dynamic Programming Foundations")
     print("="*80)
     
     # 1. 解释DP原理

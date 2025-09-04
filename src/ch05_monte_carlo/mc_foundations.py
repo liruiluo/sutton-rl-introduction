@@ -1,7 +1,7 @@
 """
 ================================================================================
-第4.1节：蒙特卡洛方法基础 - 从经验中学习
-Section 4.1: Monte Carlo Foundations - Learning from Experience
+第5.1节：蒙特卡洛方法基础 - 从经验中学习
+Section 5.1: Monte Carlo Foundations - Learning from Experience
 ================================================================================
 
 蒙特卡洛方法是强化学习的重要转折点：从需要模型到不需要模型。
@@ -67,8 +67,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第4.1.1节：回合与回报
-# Section 4.1.1: Episodes and Returns
+# 第5.1.1节：回合与回报
+# Section 5.1.1: Episodes and Returns
 # ================================================================================
 
 @dataclass
@@ -325,8 +325,8 @@ class Return:
 
 
 # ================================================================================
-# 第4.1.2节：大数定律与MC收敛
-# Section 4.1.2: Law of Large Numbers and MC Convergence
+# 第5.1.2节：大数定律与MC收敛
+# Section 5.1.2: Law of Large Numbers and MC Convergence
 # ================================================================================
 
 class LawOfLargeNumbers:
@@ -576,8 +576,8 @@ class LawOfLargeNumbers:
 
 
 # ================================================================================
-# 第4.1.3节：MC统计与收敛分析
-# Section 4.1.3: MC Statistics and Convergence Analysis
+# 第5.1.3节：MC统计与收敛分析
+# Section 5.1.3: MC Statistics and Convergence Analysis
 # ================================================================================
 
 class MCStatistics:
@@ -799,8 +799,8 @@ class MCStatistics:
 
 
 # ================================================================================
-# 第4.1.4节：MC基础理论展示
-# Section 4.1.4: MC Foundations Demonstration
+# 第5.1.4节：MC基础理论展示
+# Section 5.1.4: MC Foundations Demonstration
 # ================================================================================
 
 class MCFoundations:
@@ -1042,8 +1042,8 @@ def main():
     Run MC Foundations Demo
     """
     print("\n" + "="*80)
-    print("第4.1节：蒙特卡洛方法基础")
-    print("Section 4.1: Monte Carlo Foundations")
+    print("第5.1节：蒙特卡洛方法基础")
+    print("Section 5.1: Monte Carlo Foundations")
     print("="*80)
     
     # 1. 解释MC原理

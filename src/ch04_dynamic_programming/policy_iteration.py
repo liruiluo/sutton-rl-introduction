@@ -1,7 +1,7 @@
 """
 ================================================================================
-第3.2节：策略迭代 - 通过评估和改进找到最优策略
-Section 3.2: Policy Iteration - Finding Optimal Policy through Evaluation and Improvement
+第4.2节：策略迭代 - 通过评估和改进找到最优策略
+Section 4.2: Policy Iteration - Finding Optimal Policy through Evaluation and Improvement
 ================================================================================
 
 策略迭代是动态规划的经典算法之一，它通过不断交替进行策略评估和策略改进来找到最优策略。
@@ -63,8 +63,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第3.2.1节：策略迭代算法
-# Section 3.2.1: Policy Iteration Algorithm
+# 第4.2.1节：策略迭代算法
+# Section 4.2.1: Policy Iteration Algorithm
 # ================================================================================
 
 class PolicyIteration:
@@ -363,8 +363,8 @@ class PolicyIteration:
 
 
 # ================================================================================
-# 第3.2.2节：策略迭代可视化
-# Section 3.2.2: Policy Iteration Visualization
+# 第4.2.2节：策略迭代可视化
+# Section 4.2.2: Policy Iteration Visualization
 # ================================================================================
 
 class PolicyIterationVisualizer:
@@ -710,8 +710,8 @@ class PolicyIterationVisualizer:
 
 
 # ================================================================================
-# 第3.2.3节：策略迭代分析
-# Section 3.2.3: Policy Iteration Analysis  
+# 第4.2.3节：策略迭代分析
+# Section 4.2.3: Policy Iteration Analysis  
 # ================================================================================
 
 class PolicyIterationAnalysis:
@@ -959,8 +959,8 @@ def main():
     Run Complete Policy Iteration Demo
     """
     print("\n" + "="*80)
-    print("第3.2节：策略迭代")
-    print("Section 3.2: Policy Iteration")
+    print("第4.2节：策略迭代")
+    print("Section 4.2: Policy Iteration")
     print("="*80)
     
     # 创建测试环境

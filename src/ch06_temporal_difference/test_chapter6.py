@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-测试第5章所有时序差分模块
+测试第6章所有时序差分模块
 Test all Chapter 5 Temporal Difference modules
 
 确保所有TD算法实现正确
@@ -424,7 +424,7 @@ def main():
     Run all tests
     """
     print("\n" + "="*80)
-    print("第5章：时序差分学习 - 模块测试")
+    print("第6章：时序差分学习 - 模块测试")
     print("Chapter 5: Temporal-Difference Learning - Module Tests")
     print("="*80)
     
@@ -465,7 +465,7 @@ def main():
     print(f"\n总测试时间: {total_time:.2f}秒")
     
     if all_passed:
-        print("\n🎉 第5章所有TD模块测试通过！")
+        print("\n🎉 第6章所有TD模块测试通过！")
         print("🎉 All Chapter 5 TD modules passed!")
         print("\n时序差分学习实现验证完成:")
         print("✓ TD基础（TD(0)、TD误差、收敛性）")
@@ -474,7 +474,7 @@ def main():
         print("✓ 算法比较和分析")
         print("\n这是强化学习最核心的内容！")
         print("This is the core of reinforcement learning!")
-        print("\n可以继续学习第6章：TD(λ)和资格迹")
+        print("\n可以继续学习第7章：n步自举法")
         print("Ready to proceed to Chapter 6: TD(λ) and Eligibility Traces")
     else:
         print("\n⚠️ 有些测试失败，请检查代码")

@@ -1,6 +1,6 @@
 """
-第3章：动态规划
-Chapter 3: Dynamic Programming
+第4章：动态规划
+Chapter 4: Dynamic Programming
 
 动态规划(DP)是强化学习的理论基础！
 Dynamic Programming is the theoretical foundation of RL!

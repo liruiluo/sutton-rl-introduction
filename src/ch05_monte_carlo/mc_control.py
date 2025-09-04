@@ -1,7 +1,7 @@
 """
 ================================================================================
-第4.3节：蒙特卡洛控制 - 从经验中学习最优策略
-Section 4.3: Monte Carlo Control - Learning Optimal Policy from Experience
+第5.3节：蒙特卡洛控制 - 从经验中学习最优策略
+Section 5.3: Monte Carlo Control - Learning Optimal Policy from Experience
 ================================================================================
 
 MC控制将MC预测扩展到寻找最优策略的问题。
@@ -77,8 +77,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第4.3.1节：ε-贪婪策略
-# Section 4.3.1: Epsilon-Greedy Policy
+# 第5.3.1节：ε-贪婪策略
+# Section 5.3.1: Epsilon-Greedy Policy
 # ================================================================================
 
 class EpsilonGreedyPolicy(StochasticPolicy):
@@ -329,8 +329,8 @@ class EpsilonGreedyPolicy(StochasticPolicy):
 
 
 # ================================================================================
-# 第4.3.2节：MC控制基类
-# Section 4.3.2: MC Control Base Class
+# 第5.3.2节：MC控制基类
+# Section 5.3.2: MC Control Base Class
 # ================================================================================
 
 class MCControl(ABC):
@@ -617,8 +617,8 @@ class MCControl(ABC):
 
 
 # ================================================================================
-# 第4.3.3节：On-Policy MC控制
-# Section 4.3.3: On-Policy MC Control
+# 第5.3.3节：On-Policy MC控制
+# Section 5.3.3: On-Policy MC Control
 # ================================================================================
 
 class OnPolicyMCControl(MCControl):
@@ -844,8 +844,8 @@ class OnPolicyMCControl(MCControl):
 
 
 # ================================================================================
-# 第4.3.4节：Off-Policy MC控制
-# Section 4.3.4: Off-Policy MC Control
+# 第5.3.4节：Off-Policy MC控制
+# Section 5.3.4: Off-Policy MC Control
 # ================================================================================
 
 class OffPolicyMCControl(MCControl):
@@ -1216,8 +1216,8 @@ class OffPolicyMCControl(MCControl):
 
 
 # ================================================================================
-# 第4.3.5节：探索性起始
-# Section 4.3.5: Exploring Starts
+# 第5.3.5节：探索性起始
+# Section 5.3.5: Exploring Starts
 # ================================================================================
 
 class ExploringStarts:
@@ -1434,8 +1434,8 @@ class ExploringStarts:
 
 
 # ================================================================================
-# 第4.3.6节：MC控制可视化器
-# Section 4.3.6: MC Control Visualizer
+# 第5.3.6节：MC控制可视化器
+# Section 5.3.6: MC Control Visualizer
 # ================================================================================
 
 class MCControlVisualizer:
@@ -1732,8 +1732,8 @@ class MCControlVisualizer:
 
 
 # ================================================================================
-# 第4.3.7节：MC控制综合演示
-# Section 4.3.7: MC Control Comprehensive Demo
+# 第5.3.7节：MC控制综合演示
+# Section 5.3.7: MC Control Comprehensive Demo
 # ================================================================================
 
 def demonstrate_mc_control():

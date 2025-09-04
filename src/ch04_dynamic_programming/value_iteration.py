@@ -1,7 +1,7 @@
 """
 ================================================================================
-第3.3节：价值迭代 - 直接寻找最优价值函数
-Section 3.3: Value Iteration - Finding Optimal Value Function Directly
+第4.3节：价值迭代 - 直接寻找最优价值函数
+Section 4.3: Value Iteration - Finding Optimal Value Function Directly
 ================================================================================
 
 价值迭代是另一种动态规划算法，它跳过了显式的策略表示，直接寻找最优价值函数。
@@ -69,8 +69,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第3.3.1节：价值迭代算法
-# Section 3.3.1: Value Iteration Algorithm
+# 第4.3.1节：价值迭代算法
+# Section 4.3.1: Value Iteration Algorithm
 # ================================================================================
 
 class ValueIteration:
@@ -415,8 +415,8 @@ class ValueIteration:
 
 
 # ================================================================================
-# 第3.3.2节：异步价值迭代
-# Section 3.3.2: Asynchronous Value Iteration
+# 第4.3.2节：异步价值迭代
+# Section 4.3.2: Asynchronous Value Iteration
 # ================================================================================
 
 class AsynchronousValueIteration(ValueIteration):
@@ -677,8 +677,8 @@ class AsynchronousValueIteration(ValueIteration):
 
 
 # ================================================================================
-# 第3.3.3节：价值迭代可视化
-# Section 3.3.3: Value Iteration Visualization
+# 第4.3.3节：价值迭代可视化
+# Section 4.3.3: Value Iteration Visualization
 # ================================================================================
 
 class ValueIterationVisualizer:
@@ -923,8 +923,8 @@ class ValueIterationVisualizer:
 
 
 # ================================================================================
-# 第3.3.4节：价值迭代分析
-# Section 3.3.4: Value Iteration Analysis
+# 第4.3.4节：价值迭代分析
+# Section 4.3.4: Value Iteration Analysis
 # ================================================================================
 
 class ValueIterationAnalysis:
@@ -1163,8 +1163,8 @@ def main():
     Run Complete Value Iteration Demo
     """
     print("\n" + "="*80)
-    print("第3.3节：价值迭代")
-    print("Section 3.3: Value Iteration")
+    print("第4.3节：价值迭代")
+    print("Section 4.3: Value Iteration")
     print("="*80)
     
     # 创建测试环境

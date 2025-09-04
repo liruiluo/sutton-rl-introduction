@@ -1,7 +1,7 @@
 """
 ================================================================================
-第5.4节：TD控制 - SARSA和Q-learning
-Section 5.4: TD Control - SARSA and Q-learning
+第6.4节：TD控制 - SARSA和Q-learning
+Section 6.4: TD Control - SARSA and Q-learning
 ================================================================================
 
 TD控制是现代强化学习的基石！
@@ -85,8 +85,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第5.4.1节：SARSA算法
-# Section 5.4.1: SARSA Algorithm
+# 第6.4.1节：SARSA算法
+# Section 6.4.1: SARSA Algorithm
 # ================================================================================
 
 class SARSA:
@@ -356,8 +356,8 @@ class SARSA:
 
 
 # ================================================================================
-# 第5.4.2节：Q-Learning算法
-# Section 5.4.2: Q-Learning Algorithm
+# 第6.4.2节：Q-Learning算法
+# Section 6.4.2: Q-Learning Algorithm
 # ================================================================================
 
 class QLearning:
@@ -739,8 +739,8 @@ class QLearning:
 
 
 # ================================================================================
-# 第5.4.3节：Expected SARSA
-# Section 5.4.3: Expected SARSA  
+# 第6.4.3节：Expected SARSA
+# Section 6.4.3: Expected SARSA  
 # ================================================================================
 
 class ExpectedSARSA:
@@ -974,8 +974,8 @@ class ExpectedSARSA:
 
 
 # ================================================================================
-# 第5.4.4节：算法比较器
-# Section 5.4.4: Algorithm Comparator
+# 第6.4.4节：算法比较器
+# Section 6.4.4: Algorithm Comparator
 # ================================================================================
 
 class TDControlComparator:
@@ -1338,8 +1338,8 @@ def demonstrate_td_control():
     Demonstrate TD control algorithms
     """
     print("\n" + "="*80)
-    print("第5.4节：TD控制 - SARSA vs Q-Learning vs Expected SARSA")
-    print("Section 5.4: TD Control - SARSA vs Q-Learning vs Expected SARSA")
+    print("第6.4节：TD控制 - SARSA vs Q-Learning vs Expected SARSA")
+    print("Section 6.4: TD Control - SARSA vs Q-Learning vs Expected SARSA")
     print("="*80)
     
     from src.ch03_finite_mdp.gridworld import GridWorld

@@ -1,7 +1,7 @@
 """
 ================================================================================
-第3.5节：动态规划经典例子
-Section 3.5: Classic Dynamic Programming Examples
+第4.5节：动态规划经典例子
+Section 4.5: Classic Dynamic Programming Examples
 ================================================================================
 
 这些经典例子展示了DP在不同类型问题上的应用。
@@ -64,7 +64,7 @@ logger = logging.getLogger(__name__)
 
 # ================================================================================
 # 第3.5.1节：网格世界DP解决方案
-# Section 3.5.1: Grid World DP Solution
+# Section 4.5.1: Grid World DP Solution
 # ================================================================================
 
 class GridWorldDP:
@@ -387,7 +387,7 @@ class GridWorldDP:
 
 # ================================================================================
 # 第3.5.2节：赌徒问题
-# Section 3.5.2: Gambler's Problem
+# Section 4.5.2: Gambler's Problem
 # ================================================================================
 
 class GamblersProblem(MDPEnvironment):
@@ -716,7 +716,7 @@ class GamblersProblem(MDPEnvironment):
 
 # ================================================================================
 # 第3.5.3节：杰克汽车租赁问题
-# Section 3.5.3: Jack's Car Rental
+# Section 4.5.3: Jack's Car Rental
 # ================================================================================
 
 class CarRental(MDPEnvironment):
@@ -1032,7 +1032,7 @@ class CarRental(MDPEnvironment):
 
 # ================================================================================
 # 第3.5.4节：DP例子运行器
-# Section 3.5.4: DP Examples Runner
+# Section 4.5.4: DP Examples Runner
 # ================================================================================
 
 class DPExampleRunner:

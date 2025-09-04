@@ -1,7 +1,7 @@
 """
 ================================================================================
-第5.5节：n-step TD方法 - MC和TD的统一
-Section 5.5: n-step TD Methods - Unification of MC and TD
+第6.5节：n-step TD方法 - MC和TD的统一
+Section 6.5: n-step TD Methods - Unification of MC and TD
 ================================================================================
 
 n-step TD是MC和TD(0)之间的桥梁！
@@ -83,8 +83,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第5.5.1节：n-step TD预测
-# Section 5.5.1: n-step TD Prediction
+# 第6.5.1节：n-step TD预测
+# Section 6.5.1: n-step TD Prediction
 # ================================================================================
 
 @dataclass
@@ -369,8 +369,8 @@ class NStepTD:
 
 
 # ================================================================================
-# 第5.5.2节：n-step SARSA
-# Section 5.5.2: n-step SARSA
+# 第6.5.2节：n-step SARSA
+# Section 6.5.2: n-step SARSA
 # ================================================================================
 
 class NStepSARSA:
@@ -583,8 +583,8 @@ class NStepSARSA:
 
 
 # ================================================================================
-# 第5.5.3节：n值比较实验
-# Section 5.5.3: n Value Comparison Experiment
+# 第6.5.3节：n值比较实验
+# Section 6.5.3: n Value Comparison Experiment
 # ================================================================================
 
 class NStepComparator:
@@ -886,8 +886,8 @@ class NStepComparator:
 
 
 # ================================================================================
-# 第5.5.4节：树备份(Tree Backup)算法预览
-# Section 5.5.4: Tree Backup Algorithm Preview
+# 第6.5.4节：树备份(Tree Backup)算法预览
+# Section 6.5.4: Tree Backup Algorithm Preview
 # ================================================================================
 
 class TreeBackup:
@@ -994,8 +994,8 @@ def demonstrate_n_step_td():
     Demonstrate n-step TD methods
     """
     print("\n" + "="*80)
-    print("第5.5节：n-step TD方法")
-    print("Section 5.5: n-step TD Methods")
+    print("第6.5节：n-step TD方法")
+    print("Section 6.5: n-step TD Methods")
     print("="*80)
     
     from src.ch03_finite_mdp.gridworld import GridWorld

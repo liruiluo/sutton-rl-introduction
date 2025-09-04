@@ -1,7 +1,7 @@
 """
 ================================================================================
-第3.4节：广义策略迭代 - 强化学习的核心模式
-Section 3.4: Generalized Policy Iteration - The Core Pattern of RL
+第4.4节：广义策略迭代 - 强化学习的核心模式
+Section 4.4: Generalized Policy Iteration - The Core Pattern of RL
 ================================================================================
 
 广义策略迭代(GPI)是几乎所有强化学习方法的底层模式。
@@ -73,7 +73,7 @@ logger = logging.getLogger(__name__)
 
 # ================================================================================
 # 第3.4.1节：GPI模式定义
-# Section 3.4.1: GPI Pattern Definition
+# Section 4.4.1: GPI Pattern Definition
 # ================================================================================
 
 class GPIPattern(Enum):
@@ -144,7 +144,7 @@ class GPIState:
 
 # ================================================================================
 # 第3.4.2节：广义策略迭代算法
-# Section 3.4.2: Generalized Policy Iteration Algorithm
+# Section 4.4.2: Generalized Policy Iteration Algorithm
 # ================================================================================
 
 class GeneralizedPolicyIteration:
@@ -587,7 +587,7 @@ class GeneralizedPolicyIteration:
 
 # ================================================================================
 # 第3.4.3节：GPI可视化
-# Section 3.4.3: GPI Visualization
+# Section 4.4.3: GPI Visualization
 # ================================================================================
 
 class GPIVisualizer:
@@ -976,7 +976,7 @@ class GPIVisualizer:
 
 # ================================================================================
 # 第3.4.4节：GPI理论分析
-# Section 3.4.4: GPI Theoretical Analysis
+# Section 4.4.4: GPI Theoretical Analysis
 # ================================================================================
 
 class GPITheory:
@@ -1131,8 +1131,8 @@ def main():
     Run Generalized Policy Iteration Demo
     """
     print("\n" + "="*80)
-    print("第3.4节：广义策略迭代")
-    print("Section 3.4: Generalized Policy Iteration")
+    print("第4.4节：广义策略迭代")
+    print("Section 4.4: Generalized Policy Iteration")
     print("="*80)
     
     # 创建测试环境

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-测试第4章所有蒙特卡洛模块
+测试第5章所有蒙特卡洛模块
 Test all Chapter 4 Monte Carlo modules
 
 确保所有MC算法实现正确
@@ -472,7 +472,7 @@ def main():
     Run all tests
     """
     print("\n" + "="*80)
-    print("第4章：蒙特卡洛方法 - 模块测试")
+    print("第5章：蒙特卡洛方法 - 模块测试")
     print("Chapter 4: Monte Carlo Methods - Module Tests")
     print("="*80)
     
@@ -514,7 +514,7 @@ def main():
     print(f"\n总测试时间: {total_time:.2f}秒")
     
     if all_passed:
-        print("\n🎉 第4章所有MC模块测试通过！")
+        print("\n🎉 第5章所有MC模块测试通过！")
         print("🎉 All Chapter 4 MC modules passed!")
         print("\n蒙特卡洛方法实现验证完成:")
         print("✓ MC基础（回合、回报、统计）")
@@ -522,8 +522,8 @@ def main():
         print("✓ MC控制（On-policy、Off-policy）")
         print("✓ 重要性采样（普通、加权、增量）")
         print("✓ 经典例子（21点、赛道）")
-        print("\n可以继续学习第5章：时序差分方法")
-        print("Ready to proceed to Chapter 5: Temporal Difference Learning")
+        print("\n可以继续学习第6章：时序差分方法")
+        print("Ready to proceed to Chapter 6: Temporal Difference Learning")
     else:
         print("\n⚠️ 有些测试失败，请检查代码")
         print("⚠️ Some tests failed, please check the code")

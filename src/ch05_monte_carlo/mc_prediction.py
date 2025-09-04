@@ -1,7 +1,7 @@
 """
 ================================================================================
-第4.2节：蒙特卡洛预测 - 从经验中估计价值函数
-Section 4.2: Monte Carlo Prediction - Estimating Value Functions from Experience
+第5.2节：蒙特卡洛预测 - 从经验中估计价值函数
+Section 5.2: Monte Carlo Prediction - Estimating Value Functions from Experience
 ================================================================================
 
 MC预测是MC方法的核心，展示了如何不用模型来估计价值函数。
@@ -73,8 +73,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第4.2.1节：MC预测基类
-# Section 4.2.1: MC Prediction Base Class
+# 第5.2.1节：MC预测基类
+# Section 5.2.1: MC Prediction Base Class
 # ================================================================================
 
 class MCPrediction(ABC):
@@ -417,8 +417,8 @@ class MCPrediction(ABC):
 
 
 # ================================================================================
-# 第4.2.2节：First-Visit MC预测
-# Section 4.2.2: First-Visit MC Prediction
+# 第5.2.2节：First-Visit MC预测
+# Section 5.2.2: First-Visit MC Prediction
 # ================================================================================
 
 class FirstVisitMC(MCPrediction):
@@ -617,8 +617,8 @@ class FirstVisitMC(MCPrediction):
 
 
 # ================================================================================
-# 第4.2.3节：Every-Visit MC预测
-# Section 4.2.3: Every-Visit MC Prediction
+# 第5.2.3节：Every-Visit MC预测
+# Section 5.2.3: Every-Visit MC Prediction
 # ================================================================================
 
 class EveryVisitMC(MCPrediction):
@@ -862,8 +862,8 @@ class EveryVisitMC(MCPrediction):
 
 
 # ================================================================================
-# 第4.2.4节：增量MC预测
-# Section 4.2.4: Incremental MC Prediction
+# 第5.2.4节：增量MC预测
+# Section 5.2.4: Incremental MC Prediction
 # ================================================================================
 
 class IncrementalMC(MCPrediction):
@@ -1198,8 +1198,8 @@ class IncrementalMC(MCPrediction):
 
 
 # ================================================================================
-# 第4.2.5节：MC预测可视化器
-# Section 4.2.5: MC Prediction Visualizer
+# 第5.2.5节：MC预测可视化器
+# Section 5.2.5: MC Prediction Visualizer
 # ================================================================================
 
 class MCPredictionVisualizer:
@@ -1461,8 +1461,8 @@ class MCPredictionVisualizer:
 
 
 # ================================================================================
-# 第4.2.6节：MC预测综合演示
-# Section 4.2.6: MC Prediction Comprehensive Demo
+# 第5.2.6节：MC预测综合演示
+# Section 5.2.6: MC Prediction Comprehensive Demo
 # ================================================================================
 
 def demonstrate_mc_prediction():

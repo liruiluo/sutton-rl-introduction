@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-测试第3章所有动态规划模块
-Test all Chapter 3 Dynamic Programming modules
+测试第4章所有动态规划模块
+Test all Chapter 4 Dynamic Programming modules
 
 确保所有DP算法实现正确
 Ensure all DP algorithm implementations are correct
@@ -415,8 +415,8 @@ def main():
     Run all tests
     """
     print("\n" + "="*80)
-    print("第3章：动态规划 - 模块测试")
-    print("Chapter 3: Dynamic Programming - Module Tests")
+    print("第4章：动态规划 - 模块测试")
+    print("Chapter 4: Dynamic Programming - Module Tests")
     print("="*80)
     
     tests = [
@@ -457,16 +457,16 @@ def main():
     print(f"\n总测试时间: {total_time:.2f}秒")
     
     if all_passed:
-        print("\n🎉 第3章所有DP模块测试通过！")
-        print("🎉 All Chapter 3 DP modules passed!")
+        print("\n🎉 第4章所有DP模块测试通过！")
+        print("🎉 All Chapter 4 DP modules passed!")
         print("\n动态规划实现验证完成:")
         print("✓ 贝尔曼算子和收缩映射")
         print("✓ 策略评估和策略改进") 
         print("✓ 策略迭代和价值迭代")
         print("✓ 广义策略迭代框架")
         print("✓ 经典问题求解")
-        print("\n可以继续学习第4章：蒙特卡洛方法")
-        print("Ready to proceed to Chapter 4: Monte Carlo Methods")
+        print("\n可以继续学习第5章：蒙特卡洛方法")
+        print("Ready to proceed to Chapter 5: Monte Carlo Methods")
     else:
         print("\n⚠️ 有些测试失败，请检查代码")
         print("⚠️ Some tests failed, please check the code")

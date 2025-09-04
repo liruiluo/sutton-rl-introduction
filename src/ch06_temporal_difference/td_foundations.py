@@ -89,8 +89,8 @@ logger = logging.getLogger(__name__)
 
 
 # ================================================================================
-# 第5.1节：TD学习的数学基础
-# Section 5.1: Mathematical Foundation of TD Learning
+# 第6.1节：TD学习的数学基础
+# Section 6.1: Mathematical Foundation of TD Learning
 # ================================================================================
 
 class TDTheory:
@@ -435,8 +435,8 @@ class TDTheory:
 
 
 # ================================================================================  
-# 第5.2节：TD误差和优势函数
-# Section 5.2: TD Error and Advantage Function
+# 第6.2节：TD误差和优势函数
+# Section 6.2: TD Error and Advantage Function
 # ================================================================================
 
 @dataclass
@@ -748,8 +748,8 @@ class TDErrorAnalyzer:
 
 
 # ================================================================================
-# 第5.3节：TD(0)算法实现
-# Section 5.3: TD(0) Algorithm Implementation
+# 第6.3节：TD(0)算法实现
+# Section 6.3: TD(0) Algorithm Implementation
 # ================================================================================
 
 class TD0:
