@@ -58,8 +58,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
@@ -1538,19 +1538,19 @@ def demonstrate_importance_sampling():
     
     # 创建环境
     # Create environment
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     env = GridWorld(rows=3, cols=3,
                    start_pos=(0,0),
                    goal_pos=(2,2))
     
     # 创建行为策略（探索性）
     # Create behavior policy (exploratory)
-    from ch02_mdp.policies_and_values import UniformRandomPolicy
+    from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
     behavior_policy = UniformRandomPolicy(env.action_space)
     
     # 创建目标策略（贪婪）
     # Create target policy (greedy)
-    from ch02_mdp.policies_and_values import ActionValueFunction, DeterministicPolicy
+    from src.ch03_finite_mdp.policies_and_values import ActionValueFunction, DeterministicPolicy
     Q_init = ActionValueFunction(env.state_space, env.action_space, initial_value=0.0)
     
     # 初始化一个简单的贪婪策略

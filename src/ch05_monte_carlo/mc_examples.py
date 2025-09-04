@@ -46,8 +46,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )

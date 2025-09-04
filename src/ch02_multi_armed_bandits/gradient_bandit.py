@@ -244,7 +244,8 @@ class GradientBanditAgent(BaseBanditAgent):
     Uses softmax policy and gradient ascent
     """
     
-    def __init__(self, k: int,
+    def __init__(self, k: int = None,
+                 n_arms: int = None,
                  alpha: float = 0.1,
                  use_baseline: bool = True,
                  baseline_alpha: float = 0.1,
@@ -281,6 +282,12 @@ class GradientBanditAgent(BaseBanditAgent):
            - 平均奖励: 常用选择 Common choice
            - 加权平均: 更精确 More accurate
         """
+        # 处理n_arms参数（向后兼容）
+        if n_arms is not None:
+            k = n_arms
+        if k is None:
+            raise ValueError("必须提供k或n_arms参数")
+            
         # 注意：梯度赌博机不使用Q值，所以传递特殊参数给父类
         super().__init__(k, initial_value=0.0, **kwargs)
         

@@ -48,8 +48,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import Policy
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import Policy
 
 from .linear_approximation import LinearFeatures
 
@@ -558,8 +558,8 @@ def demonstrate_lstd():
     print("Section 9.7-9.8: Least-Squares TD")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
-    from ch02_mdp.policies_and_values import UniformRandomPolicy
+    from src.ch03_finite_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
     
     # 创建环境
     # Create environment

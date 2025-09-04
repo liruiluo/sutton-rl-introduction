@@ -39,11 +39,11 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import (
+from src.ch03_finite_mdp.mdp_framework import (
     State, Action, MDPEnvironment,
     TransitionProbability, RewardFunction
 )
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     DeterministicPolicy, StochasticPolicy
 )
@@ -981,7 +981,7 @@ def main():
     print("="*80)
     
     # 使用第2章的网格世界
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建3x3网格世界
     env = GridWorld(rows=3, cols=3, start_pos=(0, 0), goal_pos=(2, 2))
@@ -1010,7 +1010,7 @@ def main():
     print("="*80)
     
     # 创建随机策略
-    from ch02_mdp.policies_and_values import UniformRandomPolicy
+    from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
     random_policy = UniformRandomPolicy(env.action_space)
     
     # 评估策略

@@ -97,8 +97,8 @@ def test_linear_approximation():
             LinearFeatures, LinearValueFunction,
             GradientMonteCarlo, SemiGradientTD, SemiGradientTDLambda
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -245,8 +245,8 @@ def test_least_squares_td():
             LeastSquaresTD, LeastSquaresTDLambda, RecursiveLeastSquaresTD
         )
         from src.ch09_on_policy_approximation.linear_approximation import LinearFeatures
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))

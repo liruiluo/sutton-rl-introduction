@@ -62,8 +62,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment, MDPAgent
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment, MDPAgent
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
@@ -715,8 +715,8 @@ def demonstrate_off_policy_n_step():
     print("Section 7.3: Off-Policy n-step Methods")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
-    from ch02_mdp.policies_and_values import UniformRandomPolicy
+    from src.ch03_finite_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
     
     # 创建环境
     # Create environment
@@ -773,7 +773,7 @@ def demonstrate_off_policy_n_step():
     
     # 创建一个简单的贪婪目标策略
     # Create a simple greedy target policy
-    from ch02_mdp.policies_and_values import ActionValueFunction
+    from src.ch03_finite_mdp.policies_and_values import ActionValueFunction
     Q_target = ActionValueFunction(env.state_space, env.action_space, initial_value=0.0)
     # 手动设置一些Q值使策略有倾向性
     # Manually set some Q values to make policy biased

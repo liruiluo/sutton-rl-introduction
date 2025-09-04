@@ -46,12 +46,7 @@ from .gradient_bandit import (
     compare_all_algorithms
 )
 
-# 主运行脚本
-from .run_chapter1 import (
-    chapter1_summary,
-    run_complete_experiments,
-    interactive_demo
-)
+# 注：章节已完整实现，无需额外运行脚本
 
 __all__ = [
     # 环境
@@ -72,8 +67,5 @@ __all__ = [
     'demonstrate_chapter1_basics',
     'compare_epsilon_greedy_variants',
     'compare_ucb_variants',
-    'compare_all_algorithms',
-    'chapter1_summary',
-    'run_complete_experiments',
-    'interactive_demo'
+    'compare_all_algorithms'
 ]

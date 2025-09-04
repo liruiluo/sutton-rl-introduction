@@ -53,10 +53,10 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import (
+from src.ch03_finite_mdp.mdp_framework import (
     State, Action, MDPEnvironment
 )
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     DeterministicPolicy, StochasticPolicy
 )
@@ -274,7 +274,7 @@ class GeneralizedPolicyIteration:
         
         # 初始化策略
         if initial_policy is None:
-            from ch02_mdp.policies_and_values import UniformRandomPolicy
+            from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
             policy = UniformRandomPolicy(self.env.action_space)
         else:
             policy = initial_policy
@@ -1136,7 +1136,7 @@ def main():
     print("="*80)
     
     # 创建测试环境
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建4x4网格世界
     env = GridWorld(

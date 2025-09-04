@@ -29,11 +29,11 @@ def test_td_foundations():
     print("="*60)
     
     try:
-        from src.ch05_temporal_difference.td_foundations import (
+        from src.ch06_temporal_difference.td_foundations import (
             TDTheory, TDError, TDErrorAnalyzer, TD0
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 测试TD理论
         print("测试TD理论展示...")
@@ -42,7 +42,7 @@ def test_td_foundations():
         
         # 测试TD误差
         print("测试TD误差...")
-        from src.ch02_mdp.mdp_framework import State
+        from src.ch03_finite_mdp.mdp_framework import State
         test_state = State("test", features={'value': 1})
         td_error = TDError(
             value=0.5,
@@ -110,7 +110,7 @@ def test_td_control():
         from src.ch05_temporal_difference.td_control import (
             SARSA, QLearning, ExpectedSARSA, TDControlComparator
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -210,9 +210,9 @@ def test_n_step_td():
         from src.ch05_temporal_difference.n_step_td import (
             NStepExperience, NStepTD, NStepSARSA, NStepComparator
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
-        from src.ch02_mdp.mdp_framework import State, Action
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.mdp_framework import State, Action
         
         # 测试n-step经验
         print("测试n-step经验...")
@@ -304,8 +304,8 @@ def test_convergence_comparison():
         from src.ch05_temporal_difference.td_foundations import TD0
         from src.ch05_temporal_difference.td_control import SARSA, QLearning
         from src.ch05_temporal_difference.n_step_td import NStepTD
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建环境
         env = GridWorld(rows=4, cols=4, start_pos=(0,0), goal_pos=(3,3))
@@ -376,8 +376,8 @@ def test_td_vs_mc_comparison():
     try:
         from src.ch05_temporal_difference.td_foundations import TD0
         from src.ch04_monte_carlo.mc_prediction import FirstVisitMC
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))

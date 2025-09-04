@@ -198,7 +198,8 @@ class UCBAgent(BaseBanditAgent):
     Implements Upper Confidence Bound algorithm
     """
     
-    def __init__(self, k: int,
+    def __init__(self, k: int = None,
+                 n_arms: int = None,
                  c: float = 2.0,
                  **kwargs):
         """
@@ -227,13 +228,19 @@ class UCBAgent(BaseBanditAgent):
         - c = √(2ln(1/δ)): 理论值，其中δ是置信参数
           Theoretical value where δ is confidence parameter
         """
+        # 处理n_arms参数（向后兼容）
+        if n_arms is not None:
+            k = n_arms
+        if k is None:
+            raise ValueError("必须提供k或n_arms参数")
+            
         super().__init__(k, **kwargs)
         self.c = c
         self.t = 0  # 时间步计数器
         
         logger.info(f"初始化UCB智能体: k={k}, c={c}")
     
-    def select_action(self) -> int:
+    def select_action(self, t: int = None) -> int:
         """
         使用UCB策略选择动作
         Select action using UCB policy
@@ -242,10 +249,17 @@ class UCBAgent(BaseBanditAgent):
         UCB formula:
         UCB_t(a) = Q_t(a) + c·√(ln(t)/N_t(a))
         
+        Args:
+            t: 时间步（可选，如果不提供则使用内部计数器）
+               Time step (optional, uses internal counter if not provided)
+        
         Returns:
             选择的动作 Selected action
         """
-        self.t += 1
+        if t is not None:
+            self.t = t
+        else:
+            self.t += 1
         
         # 如果有未尝试的动作，先尝试
         # If there are untried actions, try them first

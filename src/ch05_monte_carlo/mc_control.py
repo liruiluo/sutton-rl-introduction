@@ -61,8 +61,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
@@ -1748,7 +1748,7 @@ def demonstrate_mc_control():
     
     # 创建测试环境
     # Create test environment
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     env = GridWorld(rows=4, cols=4,
                    start_pos=(0,0),

@@ -51,8 +51,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import Policy
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import Policy
 
 # 设置日志
 # Setup logging
@@ -947,8 +947,8 @@ def demonstrate_linear_approximation():
     print("Section 9.3-9.4: Linear Function Approximation")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
-    from ch02_mdp.policies_and_values import UniformRandomPolicy
+    from src.ch03_finite_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
     
     # 创建环境
     # Create environment

@@ -62,7 +62,7 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
 
 # 设置日志
 # Setup logging
@@ -720,7 +720,7 @@ def demonstrate_mcts():
     print("Section 8.10: Monte Carlo Tree Search")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建环境
     # Create environment

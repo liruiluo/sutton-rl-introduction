@@ -46,7 +46,7 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
 from ch09_on_policy_approximation.feature_construction import TileCoding, Iht
 
 # 设置日志

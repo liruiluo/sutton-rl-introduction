@@ -76,6 +76,7 @@ def main():
     
     # 定义所有章节及其测试
     chapters = [
+        (1, "src.ch01_introduction", "test_chapter1"),
         (2, "src.ch02_multi_armed_bandits", "test_chapter2"),
         (3, "src.ch03_finite_mdp", "test_chapter3"),
         (4, "src.ch04_dynamic_programming", "test_chapter4"),
@@ -185,13 +186,14 @@ def quick_test():
     print("="*80)
     
     key_chapters = [
+        (1, "src.ch01_introduction", "test_chapter1"),          # 引言
         (2, "src.ch02_multi_armed_bandits", "test_chapter2"),  # 基础
         (6, "src.ch06_temporal_difference", "test_chapter6"),   # TD学习
         (9, "src.ch09_on_policy_approximation", "test_chapter9"), # 函数逼近
         (13, "src.ch13_policy_gradient", "test_chapter13"),     # 策略梯度
     ]
     
-    print("\n测试关键章节: 2, 6, 9, 13")
+    print("\n测试关键章节: 1, 2, 6, 9, 13")
     
     all_passed = True
     for chapter_num, module_path, test_file in key_chapters:
@@ -223,6 +225,7 @@ if __name__ == "__main__":
     elif args.chapter:
         # 测试单个章节
         chapters_map = {
+            1: ("src.ch01_introduction", "test_chapter1"),
             2: ("src.ch02_multi_armed_bandits", "test_chapter2"),
             3: ("src.ch03_finite_mdp", "test_chapter3"),
             4: ("src.ch04_dynamic_programming", "test_chapter4"),

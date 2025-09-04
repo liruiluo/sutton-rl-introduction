@@ -55,8 +55,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, ActionValueFunction
 )
 from ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
@@ -728,7 +728,7 @@ def demonstrate_dyna_q():
     print("Section 8.2: Dyna-Q Algorithm")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建环境
     # Create environment

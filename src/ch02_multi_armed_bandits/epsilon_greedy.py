@@ -54,7 +54,8 @@ class EpsilonGreedyAgent(BaseBanditAgent):
     - Q(a): 动作a的价值估计 Value estimate of action a
     """
     
-    def __init__(self, k: int, 
+    def __init__(self, k: int = None, 
+                 n_arms: int = None,
                  epsilon: float = 0.1,
                  epsilon_decay: Optional[float] = None,
                  epsilon_min: float = 0.01,
@@ -82,6 +83,12 @@ class EpsilonGreedyAgent(BaseBanditAgent):
            - 衰减ε: 开始多探索，后期多利用 More exploration early, more exploitation later
            - 自适应ε: 根据不确定性调整 Adapt based on uncertainty
         """
+        # 处理n_arms参数（向后兼容）
+        if n_arms is not None:
+            k = n_arms
+        if k is None:
+            raise ValueError("必须提供k或n_arms参数")
+            
         # 先设置epsilon相关属性，因为reset()会用到
         self.epsilon_initial = epsilon
         self.epsilon = epsilon

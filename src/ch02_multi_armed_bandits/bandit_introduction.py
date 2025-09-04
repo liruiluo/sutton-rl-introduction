@@ -716,6 +716,11 @@ class BaseBanditAgent(ABC):
         self.reward_history.append(reward)
         self.Q_history.append(self.Q.copy())
     
+    @property
+    def action_counts(self):
+        """获取动作计数（向后兼容）"""
+        return self.N.astype(int)
+    
     def get_statistics(self) -> Dict[str, Any]:
         """
         获取智能体统计信息

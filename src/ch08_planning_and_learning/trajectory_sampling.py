@@ -50,8 +50,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, ActionValueFunction, StateValueFunction
 )
 from ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
@@ -730,7 +730,7 @@ def demonstrate_trajectory_sampling():
     print("Section 8.6: Trajectory Sampling")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建环境
     # Create environment
@@ -776,7 +776,7 @@ def demonstrate_trajectory_sampling():
     
     # 创建随机策略
     # Create random policy
-    from ch02_mdp.policies_and_values import UniformRandomPolicy
+    from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
     random_policy = UniformRandomPolicy(env.action_space)
     
     # 生成轨迹

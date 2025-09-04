@@ -45,10 +45,10 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import (
+from src.ch03_finite_mdp.mdp_framework import (
     State, Action, MDPEnvironment
 )
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     DeterministicPolicy, StochasticPolicy
 )
@@ -208,7 +208,7 @@ class PolicyIteration:
         # 初始化策略
         if initial_policy is None:
             # 使用均匀随机策略作为初始策略
-            from ch02_mdp.policies_and_values import UniformRandomPolicy
+            from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
             policy = UniformRandomPolicy(self.env.action_space)
             logger.info("使用均匀随机策略初始化")
         else:
@@ -838,7 +838,7 @@ class PolicyIterationAnalysis:
         print("Initial Policy Comparison Experiment")
         print("="*80)
         
-        from ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 不同的初始策略
         initial_policies = []
@@ -964,7 +964,7 @@ def main():
     print("="*80)
     
     # 创建测试环境
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建4x4网格世界（稍大一些展示算法）
     env = GridWorld(

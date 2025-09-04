@@ -70,8 +70,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
-from ch02_mdp.mdp_framework import State, Action, MDPEnvironment, MDPAgent
-from ch02_mdp.policies_and_values import (
+from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment, MDPAgent
+from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
@@ -1342,7 +1342,7 @@ def demonstrate_td_control():
     print("Section 5.4: TD Control - SARSA vs Q-Learning vs Expected SARSA")
     print("="*80)
     
-    from ch02_mdp.gridworld import GridWorld
+    from src.ch03_finite_mdp.gridworld import GridWorld
     
     # 创建环境
     # Create environment
