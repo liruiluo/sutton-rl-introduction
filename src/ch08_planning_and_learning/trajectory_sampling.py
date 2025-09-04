@@ -54,7 +54,7 @@ from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
 from src.ch03_finite_mdp.policies_and_values import (
     Policy, ActionValueFunction, StateValueFunction
 )
-from ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
+from src.ch05_monte_carlo.mc_control import EpsilonGreedyPolicy
 
 from .models_and_planning import DeterministicModel
 

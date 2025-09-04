@@ -63,10 +63,10 @@ from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
-from ch04_monte_carlo.mc_foundations import (
+from .mc_foundations import (
     Episode, Experience, Return, MCStatistics
 )
-from ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
+from .mc_control import EpsilonGreedyPolicy
 
 # 设置日志
 logging.basicConfig(level=logging.INFO)
@@ -1614,7 +1614,7 @@ def demonstrate_importance_sampling():
     
     # 创建ε-贪婪行为策略
     # Create ε-greedy behavior policy
-    from ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
+    from .mc_control import EpsilonGreedyPolicy
     behavior_policy_eps = EpsilonGreedyPolicy(Q_init, epsilon=0.3, action_space=env.action_space)
     
     incremental_is = IncrementalISMC(
@@ -1688,7 +1688,7 @@ def demonstrate_importance_sampling():
 
 def generate_episode(env, policy, max_steps=1000):
     """辅助函数：生成回合"""
-    from ch04_monte_carlo.mc_foundations import Episode, Experience
+    from .mc_foundations import Episode, Experience
     
     episode = Episode()
     state = env.reset()

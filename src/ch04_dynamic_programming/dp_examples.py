@@ -54,8 +54,8 @@ from src.ch03_finite_mdp.policies_and_values import (
     DeterministicPolicy
 )
 from src.ch03_finite_mdp.gridworld import GridWorld
-from policy_iteration import PolicyIteration
-from value_iteration import ValueIteration
+from .policy_iteration import PolicyIteration
+from .value_iteration import ValueIteration
 
 # 设置日志
 logging.basicConfig(level=logging.INFO)

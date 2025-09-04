@@ -32,7 +32,7 @@ def test_models_and_planning():
         from src.ch08_planning_and_learning.models_and_planning import (
             DeterministicModel, StochasticModel, PlanningAgent
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -102,7 +102,7 @@ def test_dyna_q():
         from src.ch08_planning_and_learning.dyna_q import (
             DynaQ, DynaQPlus, DynaQComparator
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建环境
         env = GridWorld(rows=4, cols=4, start_pos=(0,0), goal_pos=(3,3))
@@ -175,13 +175,13 @@ def test_prioritized_sweeping():
         from src.ch08_planning_and_learning.prioritized_sweeping import (
             PriorityQueue, PrioritizedSweeping, PrioritizedDynaQ
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 测试优先队列
         print("测试优先队列...")
         pqueue = PriorityQueue(threshold=0.01)
         
-        from src.ch02_mdp.mdp_framework import State, Action
+        from src.ch03_finite_mdp.mdp_framework import State, Action
         state1 = State("s1", features={})
         state2 = State("s2", features={})
         action1 = Action("a1")
@@ -252,7 +252,7 @@ def test_expected_vs_sample():
             ExpectedUpdate, SampleUpdate, UpdateComparator
         )
         from src.ch08_planning_and_learning.models_and_planning import StochasticModel
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建环境和模型
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -337,8 +337,8 @@ def test_trajectory_sampling():
             UniformSampling, OnPolicySampling, RealTimeDynamicProgramming
         )
         from src.ch08_planning_and_learning.models_and_planning import DeterministicModel
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -428,8 +428,8 @@ def test_mcts():
         from src.ch08_planning_and_learning.mcts import (
             MCTSNode, UCTSelection, MonteCarloTreeSearch
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.mdp_framework import State, Action
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.mdp_framework import State, Action
         
         # 测试MCTS节点
         print("测试MCTS节点...")

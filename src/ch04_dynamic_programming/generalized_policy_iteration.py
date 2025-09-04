@@ -60,11 +60,11 @@ from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     DeterministicPolicy, StochasticPolicy
 )
-from dp_foundations import (
+from .dp_foundations import (
     BellmanOperator, PolicyEvaluationDP, PolicyImprovementDP
 )
-from policy_iteration import PolicyIteration
-from value_iteration import ValueIteration
+from .policy_iteration import PolicyIteration
+from .value_iteration import ValueIteration
 
 # 设置日志
 logging.basicConfig(level=logging.INFO)

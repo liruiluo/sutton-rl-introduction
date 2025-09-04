@@ -24,7 +24,7 @@ def test_mdp_framework():
     print("="*60)
     
     try:
-        from src.ch02_mdp.mdp_framework import (
+        from src.ch03_finite_mdp.mdp_framework import (
             State, Action, MDPEnvironment, MDPAgent,
             RecyclingRobot, MDPMathematics
         )
@@ -38,7 +38,7 @@ def test_mdp_framework():
         print(f"✓ 重置到初始状态: {state.id}")
         
         # 执行动作
-        from src.ch02_mdp.mdp_framework import Action
+        from src.ch03_finite_mdp.mdp_framework import Action
         search_action = Action(id='search', name='搜索垃圾')
         next_state, reward, done, info = env.step(search_action)
         print(f"✓ 执行动作: {search_action.name} -> 奖励={reward}")
@@ -60,12 +60,12 @@ def test_agent_environment_interface():
     print("="*60)
     
     try:
-        from src.ch02_mdp.agent_environment_interface import (
+        from src.ch03_finite_mdp.agent_environment_interface import (
             Experience, Trajectory, Episode,
             AgentEnvironmentInterface, RandomAgent,
             ExperienceBuffer
         )
-        from src.ch02_mdp.mdp_framework import RecyclingRobot, Action
+        from src.ch03_finite_mdp.mdp_framework import RecyclingRobot, Action
         
         # 创建环境
         env = RecyclingRobot()
@@ -110,13 +110,13 @@ def test_policies_and_values():
     print("="*60)
     
     try:
-        from src.ch02_mdp.policies_and_values import (
+        from src.ch03_finite_mdp.policies_and_values import (
             Policy, DeterministicPolicy, StochasticPolicy,
             UniformRandomPolicy, StateValueFunction,
             ActionValueFunction, BellmanEquations,
             PolicyEvaluation
         )
-        from src.ch02_mdp.mdp_framework import RecyclingRobot
+        from src.ch03_finite_mdp.mdp_framework import RecyclingRobot
         
         # 创建环境
         env = RecyclingRobot()
@@ -161,7 +161,7 @@ def test_gridworld():
     print("="*60)
     
     try:
-        from src.ch02_mdp.gridworld import (
+        from src.ch03_finite_mdp.gridworld import (
             GridWorld, GridWorldAgent, GridWorldVisualizer
         )
         

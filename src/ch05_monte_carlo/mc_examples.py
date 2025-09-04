@@ -51,8 +51,8 @@ from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
-from ch04_monte_carlo.mc_foundations import Episode, Experience
-from ch04_monte_carlo.mc_control import OnPolicyMCControl, EpsilonGreedyPolicy
+from .mc_foundations import Episode, Experience
+from .mc_control import OnPolicyMCControl, EpsilonGreedyPolicy
 
 # 设置日志
 logging.basicConfig(level=logging.INFO)

@@ -72,7 +72,7 @@ from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
-from ch05_temporal_difference.td_foundations import TDError, TDErrorAnalyzer
+from src.ch06_temporal_difference.td_foundations import TDError, TDErrorAnalyzer
 
 # 设置日志
 # Setup logging

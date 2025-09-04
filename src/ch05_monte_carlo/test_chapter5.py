@@ -29,11 +29,11 @@ def test_mc_foundations():
     print("="*60)
     
     try:
-        from src.ch04_monte_carlo.mc_foundations import (
+        from src.ch05_monte_carlo.mc_foundations import (
             Episode, Experience, Return, MCStatistics,
             LawOfLargeNumbers, MCFoundations
         )
-        from src.ch02_mdp.mdp_framework import State, Action
+        from src.ch03_finite_mdp.mdp_framework import State, Action
         
         # 测试Episode类
         print("测试Episode类...")
@@ -102,11 +102,11 @@ def test_mc_prediction():
     print("="*60)
     
     try:
-        from src.ch04_monte_carlo.mc_prediction import (
+        from src.ch05_monte_carlo.mc_prediction import (
             FirstVisitMC, EveryVisitMC, IncrementalMC
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建简单环境
         env = GridWorld(rows=2, cols=2, start_pos=(0,0), goal_pos=(1,1))
@@ -184,11 +184,11 @@ def test_mc_control():
     print("="*60)
     
     try:
-        from src.ch04_monte_carlo.mc_control import (
+        from src.ch05_monte_carlo.mc_control import (
             EpsilonGreedyPolicy, OnPolicyMCControl, OffPolicyMCControl
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import ActionValueFunction
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import ActionValueFunction
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -249,12 +249,12 @@ def test_importance_sampling():
     print("="*60)
     
     try:
-        from src.ch04_monte_carlo.importance_sampling import (
+        from src.ch05_monte_carlo.importance_sampling import (
             OrdinaryImportanceSampling, WeightedImportanceSampling,
             IncrementalISMC
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import (
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import (
             UniformRandomPolicy, DeterministicPolicy
         )
         
@@ -281,7 +281,7 @@ def test_importance_sampling():
         )
         
         # 生成并处理一个回合
-        from src.ch04_monte_carlo.mc_foundations import Episode, Experience
+        from src.ch05_monte_carlo.mc_foundations import Episode, Experience
         episode = Episode()
         state = env.reset()
         for _ in range(5):
@@ -309,8 +309,8 @@ def test_importance_sampling():
         
         # 测试增量IS MC
         print("测试增量IS MC...")
-        from src.ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
-        from src.ch02_mdp.policies_and_values import ActionValueFunction
+        from src.ch05_monte_carlo.mc_control import EpsilonGreedyPolicy
+        from src.ch03_finite_mdp.policies_and_values import ActionValueFunction
         
         Q = ActionValueFunction(env.state_space, env.action_space, 0.0)
         behavior_eps = EpsilonGreedyPolicy(Q, epsilon=0.3, action_space=env.action_space)
@@ -344,7 +344,7 @@ def test_mc_examples():
     print("="*60)
     
     try:
-        from src.ch04_monte_carlo.mc_examples import (
+        from src.ch05_monte_carlo.mc_examples import (
             Blackjack, BlackjackPolicy, RaceTrack
         )
         
@@ -420,9 +420,9 @@ def test_convergence():
     print("="*60)
     
     try:
-        from src.ch04_monte_carlo.mc_prediction import FirstVisitMC, EveryVisitMC
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch05_monte_carlo.mc_prediction import FirstVisitMC, EveryVisitMC
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建简单确定性环境
         env = GridWorld(rows=2, cols=2, start_pos=(0,0), goal_pos=(1,1))

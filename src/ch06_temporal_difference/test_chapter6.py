@@ -107,7 +107,7 @@ def test_td_control():
     print("="*60)
     
     try:
-        from src.ch05_temporal_difference.td_control import (
+        from src.ch06_temporal_difference.td_control import (
             SARSA, QLearning, ExpectedSARSA, TDControlComparator
         )
         from src.ch03_finite_mdp.gridworld import GridWorld
@@ -207,7 +207,7 @@ def test_n_step_td():
     print("="*60)
     
     try:
-        from src.ch05_temporal_difference.n_step_td import (
+        from src.ch06_temporal_difference.n_step_td import (
             NStepExperience, NStepTD, NStepSARSA, NStepComparator
         )
         from src.ch03_finite_mdp.gridworld import GridWorld
@@ -301,9 +301,9 @@ def test_convergence_comparison():
     print("="*60)
     
     try:
-        from src.ch05_temporal_difference.td_foundations import TD0
-        from src.ch05_temporal_difference.td_control import SARSA, QLearning
-        from src.ch05_temporal_difference.n_step_td import NStepTD
+        from src.ch06_temporal_difference.td_foundations import TD0
+        from src.ch06_temporal_difference.td_control import SARSA, QLearning
+        from src.ch06_temporal_difference.n_step_td import NStepTD
         from src.ch03_finite_mdp.gridworld import GridWorld
         from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
@@ -374,8 +374,8 @@ def test_td_vs_mc_comparison():
     print("="*60)
     
     try:
-        from src.ch05_temporal_difference.td_foundations import TD0
-        from src.ch04_monte_carlo.mc_prediction import FirstVisitMC
+        from src.ch06_temporal_difference.td_foundations import TD0
+        from src.ch05_monte_carlo.mc_prediction import FirstVisitMC
         from src.ch03_finite_mdp.gridworld import GridWorld
         from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         

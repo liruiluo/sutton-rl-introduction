@@ -53,7 +53,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 from src.ch03_finite_mdp.mdp_framework import State, Action, MDPEnvironment
 from src.ch03_finite_mdp.policies_and_values import ActionValueFunction
-from ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
+from src.ch05_monte_carlo.mc_control import EpsilonGreedyPolicy
 
 from .models_and_planning import StochasticModel
 

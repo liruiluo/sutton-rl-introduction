@@ -29,14 +29,14 @@ def test_dp_foundations():
     print("="*60)
     
     try:
-        from src.ch03_dynamic_programming.dp_foundations import (
+        from src.ch04_dynamic_programming.dp_foundations import (
             DynamicProgrammingFoundations,
             BellmanOperator,
             PolicyEvaluationDP,
             PolicyImprovementDP
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import (
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import (
             UniformRandomPolicy, StateValueFunction
         )
         
@@ -96,11 +96,11 @@ def test_policy_iteration():
     print("="*60)
     
     try:
-        from src.ch03_dynamic_programming.policy_iteration import (
+        from src.ch04_dynamic_programming.policy_iteration import (
             PolicyIteration,
             PolicyIterationVisualizer
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建测试环境
         env = GridWorld(
@@ -136,7 +136,7 @@ def test_policy_iteration():
         print(f"  目标价值: {goal_value:.3f}")
         
         # 测试策略合理性（应该大致指向目标）
-        from src.ch02_mdp.policies_and_values import DeterministicPolicy
+        from src.ch03_finite_mdp.policies_and_values import DeterministicPolicy
         if isinstance(policy, DeterministicPolicy):
             # 检查起始位置的动作
             if start_state in policy.policy_map:
@@ -164,11 +164,11 @@ def test_value_iteration():
     print("="*60)
     
     try:
-        from src.ch03_dynamic_programming.value_iteration import (
+        from src.ch04_dynamic_programming.value_iteration import (
             ValueIteration,
             AsynchronousValueIteration
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建测试环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -226,11 +226,11 @@ def test_generalized_policy_iteration():
     print("="*60)
     
     try:
-        from src.ch03_dynamic_programming.generalized_policy_iteration import (
+        from src.ch04_dynamic_programming.generalized_policy_iteration import (
             GeneralizedPolicyIteration,
             GPIPattern
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建测试环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -298,12 +298,12 @@ def test_dp_examples():
     print("="*60)
     
     try:
-        from src.ch03_dynamic_programming.dp_examples import (
+        from src.ch04_dynamic_programming.dp_examples import (
             GridWorldDP,
             GamblersProblem,
             CarRental
         )
-        from src.ch03_dynamic_programming.value_iteration import ValueIteration
+        from src.ch04_dynamic_programming.value_iteration import ValueIteration
         
         # 测试网格世界DP
         print("\n1. 测试网格世界DP")
@@ -352,9 +352,9 @@ def test_convergence_properties():
     print("="*60)
     
     try:
-        from src.ch03_dynamic_programming.policy_iteration import PolicyIteration
-        from src.ch03_dynamic_programming.value_iteration import ValueIteration
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch04_dynamic_programming.policy_iteration import PolicyIteration
+        from src.ch04_dynamic_programming.value_iteration import ValueIteration
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建测试环境
         env = GridWorld(rows=5, cols=5, start_pos=(0,0), goal_pos=(4,4))

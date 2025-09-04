@@ -33,9 +33,9 @@ def test_n_step_td():
             NStepReturn, NStepBuffer, NStepTD, NStepTDComparator,
             NStepExperience
         )
-        from src.ch02_mdp.mdp_framework import State
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.mdp_framework import State
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 测试n步回报计算
         print("测试n步回报计算...")
@@ -135,7 +135,7 @@ def test_n_step_sarsa():
         from src.ch07_n_step_bootstrapping.n_step_sarsa import (
             NStepSARSA, NStepExpectedSARSA, NStepQSigma
         )
-        from src.ch02_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.gridworld import GridWorld
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))
@@ -223,9 +223,9 @@ def test_off_policy_n_step():
         from src.ch07_n_step_bootstrapping.off_policy_n_step import (
             ImportanceSamplingCorrection, OffPolicyNStepTD, OffPolicyNStepSARSA
         )
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
-        from src.ch04_monte_carlo.mc_control import EpsilonGreedyPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch05_monte_carlo.mc_control import EpsilonGreedyPolicy
         
         # 测试重要性采样修正
         print("测试重要性采样修正...")
@@ -263,7 +263,7 @@ def test_off_policy_n_step():
         # 创建行为和目标策略
         behavior_policy = UniformRandomPolicy(env.action_space)
         
-        from src.ch02_mdp.policies_and_values import ActionValueFunction
+        from src.ch03_finite_mdp.policies_and_values import ActionValueFunction
         Q_target = ActionValueFunction(env.state_space, env.action_space, 0.0)
         target_policy = EpsilonGreedyPolicy(
             Q_target, epsilon=0.1, epsilon_decay=1.0,
@@ -334,9 +334,9 @@ def test_tree_backup():
         from src.ch07_n_step_bootstrapping.tree_backup import (
             TreeBackupNode, NStepTreeBackup, TreeBackupVisualizer
         )
-        from src.ch02_mdp.mdp_framework import State, Action
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.mdp_framework import State, Action
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 测试Tree Backup节点
         print("测试Tree Backup节点...")
@@ -438,8 +438,8 @@ def test_n_step_comparison():
         from src.ch07_n_step_bootstrapping.n_step_td import NStepTD
         from src.ch07_n_step_bootstrapping.n_step_sarsa import NStepSARSA, NStepExpectedSARSA
         from src.ch07_n_step_bootstrapping.tree_backup import NStepTreeBackup
-        from src.ch02_mdp.gridworld import GridWorld
-        from src.ch02_mdp.policies_and_values import UniformRandomPolicy
+        from src.ch03_finite_mdp.gridworld import GridWorld
+        from src.ch03_finite_mdp.policies_and_values import UniformRandomPolicy
         
         # 创建环境
         env = GridWorld(rows=3, cols=3, start_pos=(0,0), goal_pos=(2,2))

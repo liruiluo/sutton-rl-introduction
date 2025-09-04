@@ -63,7 +63,7 @@ from src.ch03_finite_mdp.policies_and_values import (
     Policy, StateValueFunction, ActionValueFunction,
     StochasticPolicy, DeterministicPolicy
 )
-from ch04_monte_carlo.mc_foundations import (
+from .mc_foundations import (
     Episode, Experience, Return, MCStatistics
 )
 

@@ -119,7 +119,17 @@ class LinearFeatures:
             # 从State对象提取特征
             # Extract features from State object
             if hasattr(state, 'features'):
-                features = np.array(list(state.features.values()))
+                # 处理不同类型的features
+                # Handle different types of features
+                if isinstance(state.features, dict):
+                    features = np.array(list(state.features.values()))
+                elif isinstance(state.features, (list, tuple)):
+                    features = np.array(state.features)
+                elif isinstance(state.features, np.ndarray):
+                    features = state.features
+                else:
+                    features = np.array([state.features])
+                    
                 # 填充或截断到正确维度
                 # Pad or truncate to correct dimension
                 if len(features) < self.n_features:
