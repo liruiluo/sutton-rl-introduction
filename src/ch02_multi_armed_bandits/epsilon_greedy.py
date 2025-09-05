@@ -347,7 +347,7 @@ class Figure2_2Reproduction:
                 # 运行实验
                 for step in range(n_steps):
                     action = agent.select_action()
-                    reward = bandit.pull_arm(action)
+                    reward = bandit.step(action)
                     agent.update(action, reward)
                     
                     # 记录结果
@@ -558,7 +558,7 @@ def compare_epsilon_greedy_variants(n_steps: int = 1000,
         rewards = []
         for _ in range(n_steps):
             action = agent.select_action()
-            reward = bandit.pull_arm(action)
+            reward = bandit.step(action)
             agent.update(action, reward)
             rewards.append(reward)
         
@@ -602,7 +602,7 @@ def demonstrate_epsilon_greedy():
     rewards = []
     for step in range(100):
         action = agent.select_action()
-        reward = bandit.pull_arm(action)
+        reward = bandit.step(action)
         agent.update(action, reward)
         rewards.append(reward)
         
@@ -616,7 +616,7 @@ def demonstrate_epsilon_greedy():
     print("-" * 40)
     print(f"动作选择次数: {agent.action_counts}")
     print(f"估计动作价值: {np.round(agent.Q, 2)}")
-    print(f"真实动作价值: {np.round(bandit.means, 2)}")
+    print(f"真实动作价值: {np.round(bandit.q_true, 2)}")
     print(f"最常选择的动作: {np.argmax(agent.action_counts)}")
     print(f"真实最优动作: {bandit.optimal_action}")
 
